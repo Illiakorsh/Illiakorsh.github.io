@@ -1,143 +1,112 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Професійна відкачка води</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Відкачка води — професійно</title>
+  <meta name="description" content="Професійна відкачка води будь-яких об’ємів: чиста та брудна вода. Підвали, гаражі, котловани, склади." />
+  <!-- Якщо додаси широку обкладинку images/hero.jpg — вона підтягнеться як фон -->
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      background: #f9f9f9;
-      color: #333;
+    :root{
+      --brand:#0057b7;   /* синій */
+      --brand-dark:#003d82;
+      --accent:#ffd100;  /* теплий жовтий */
+      --text:#282b2f;
+      --muted:#6b7280;
+      --bg:#f7f8fb;
+      --card:#ffffff;
+      --radius:14px;
+      --shadow:0 10px 25px rgba(0,0,0,.06);
     }
-    header {
-      background: #0057b7;
-      color: white;
-      padding: 1.5rem;
-      text-align: center;
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+    header{
+      background:linear-gradient(180deg, rgba(0,87,183,.95), rgba(0,61,130,.95)), url("images/hero.jpg") center/cover no-repeat;
+      color:#fff; padding:64px 16px 56px; text-align:center;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
+    .wrap{max-width:1024px;margin:auto;padding:0 16px}
+    .brand{font-size:28px;font-weight:800;letter-spacing:.3px;margin:0}
+    .tag{display:inline-block;margin-top:12px;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.15);backdrop-filter:blur(2px);font-weight:600}
+    .hero-title{font-size:38px;line-height:1.15;margin:18px auto 10px;max-width:820px}
+    .hero-sub{margin:0 auto 10px;max-width:820px;opacity:.95}
+    main section{padding:48px 0}
+    h2{margin:0 0 18px;font-size:26px;color:var(--brand)}
+    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px}
+    .grid{display:grid;gap:20px}
+    @media (min-width:768px){.grid-cols-3{grid-template-columns:repeat(3,1fr)}.grid-cols-2{grid-template-columns:repeat(2,1fr)}}
+    .list{margin:0;padding-left:18px}
+    .list li{margin:6px 0}
+    .note{color:var(--muted);font-size:.95rem}
+    .contact{
+      background:linear-gradient(180deg,#fff, #f3f6ff);
+      border:1px solid #e6ecff;
+      display:grid; gap:14px; align-items:start
     }
-    nav {
-      background: #003d82;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 0.8rem;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    .hero {
-      background: url("https://images.unsplash.com/photo-1521207418485-99c705420785?auto=format&fit=crop&w=1350&q=80") center/cover no-repeat;
-      color: white;
-      text-align: center;
-      padding: 6rem 1rem;
-    }
-    .hero h2 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
-    }
-    .hero p {
-      font-size: 1.2rem;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
-    }
-    section {
-      padding: 3rem 1.5rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
-    .card {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-    .card h3 {
-      margin-top: 0;
-      color: #0057b7;
-    }
-    .contact {
-      background: #0057b7;
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-    .contact a {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.8rem 1.5rem;
-      background: #ffcc00;
-      color: #003d82;
-      font-weight: bold;
-      border-radius: 5px;
-      text-decoration: none;
-    }
-    footer {
-      text-align: center;
-      background: #003d82;
-      color: white;
-      padding: 1rem;
-      font-size: 0.9rem;
-    }
+    .contact h3{margin:0 0 6px;font-size:20px;color:var(--brand-dark)}
+    .pill{display:inline-block;background:var(--accent);color:#1f2937;font-weight:700;padding:6px 10px;border-radius:999px}
+    .contact .row{display:grid; gap:6px}
+    .label{font-size:.85rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+    .value{font-size:1.15rem;font-weight:700}
+    .gallery img{width:100%;height:220px;object-fit:cover;border-radius:12px;border:1px solid #eef2ff;box-shadow:0 6px 16px rgba(0,0,0,.06)}
+    footer{padding:26px 16px;text-align:center;color:#6b7280}
   </style>
 </head>
 <body>
   <header>
-    <h1>Відкачка води</h1>
-    <p>Швидко • Надійно • Професійно</p>
+    <div class="wrap">
+      <p class="brand">Відкачка води</p>
+      <span class="tag">Будь-які об’єми • чиста й брудна вода</span>
+      <h1 class="hero-title">Професійна відкачка води з підвалів, гаражів, котлованів, складів</h1>
+      <p class="hero-sub">Акуратно, безпечно, із сучасним обладнанням. Працюємо по місту та області.</p>
+    </div>
   </header>
 
-  <nav>
-  </nav>
-  <section class="hero">
-    <h2>Професійна відкачка води</h2>
-    <p>Аварійна допомога 24/7 — відкачка після затоплення, підтоплення та аварій</p>
-  </section>
+  <main class="wrap">
+    <section>
+      <div class="grid grid-cols-2">
+        <div class="card">
+          <h2>Послуги</h2>
+          <ul class="list">
+            <li>Відкачка <strong>чистої</strong> та <strong>брудної</strong> води</li>
+            <li>Будь-які об’єми — від невеликих підтоплень до великих площ</li>
+            <li>Підвали, гаражі, техприміщення, котловани, склади</li>
+            <li>Обережне поводження з майном, базове прибирання після робіт</li>
+          </ul>
+          <p class="note">* За потреби надамо шланги/подовжувачі та узгодимо доступ до зливу.</p>
+        </div>
 
-  <section id="services">
-    <h2>Наші послуги</h2>
-    <div class="services">
-      <div class="card">
-        <h3>Відкачка підвалів</h3>
-        <p>Швидко та ефективно прибираємо воду з підвалів та гаражів.</p>
+        <div class="card contact">
+          <div>
+            <span class="pill">Контакти</span>
+            <h3>Зв’язатися з нами</h3>
+            <div class="row">
+              <span class="label">Телефон</span>
+              <div class="value">+38 (067) 123-45-67</div>
+            </div>
+            <div class="row">
+              <span class="label">Email</span>
+              <div class="value">info@voda-service.com</div>
+            </div>
+            <p class="note">Зателефонуйте або напишіть — узгодимо час виїзду та вартість.</p>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <h3>Аварійна відкачка</h3>
-        <p>Цілодобова допомога при затопленнях, поломках труб та аваріях.</p>
-      </div>
-      <div class="card">
-        <h3>Відкачка септиків</h3>
-        <p>Очищення вигрібних ям, септиків та каналізаційних систем.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contact" class="contact">
-    <h2>Зв'яжіться з нами</h2>
-    <p>Телефон: <strong>+38 (000) 000-00-00</strong></p>
-    <p>Email: <strong>пошта</strong></p>
-    <a href="tel:+380671234567">Подзвонити зараз</a>
-  </section>
+    <section>
+      <h2>Галерея</h2>
+      <div class="grid grid-cols-3 gallery">
+        <!-- Заміни назви файлів на свої і додай у папку /images -->
+        <img src="images/pump-1.jpg" alt="Дренажний насос для відкачки води">
+        <img src="images/pump-2.jpg" alt="Відкачка після підтоплення">
+        <img src="images/pump-3.jpg" alt="Шланг та помпа для грязної води">
+      </div>
+      <p class="note" style="margin-top:10px">Порада: використовуй широкі горизонтальні фото для кращого вигляду.</p>
+    </section>
+  </main>
 
   <footer>
-    &copy; 2025 Відкачка води. Всі права захищено.
+    © 2025 • Відкачка води. Усі права захищено.
   </footer>
 </body>
 </html>
