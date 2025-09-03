@@ -94,11 +94,18 @@
     <section>
       <h2>Галерея</h2>
       <div class="grid grid-cols-3 gallery">
-        <!-- Заміни назви файлів на свої і додай у папку /images -->
-        <img src="image1.webp" alt="Дренажний насос для відкачки води">
-        <img src="image2.webp" alt="Відкачка після підтоплення">
-        <img src="images/pump-3.jpg" alt="Шланг та помпа для грязної води">
-      </div>
+  <picture>
+    <source srcset="images/image1.webp" type="image/webp">
+    <img src="images/image1.jpg" alt="Дренажний насос для відкачки води">
+  </picture>
+
+  <picture>
+    <source srcset="images/image2.webp" type="image/webp">
+    <img src="images/image2.jpg" alt="Відкачка після підтоплення">
+  </picture>
+
+  <img src="images/pump-3.jpg" alt="Шланг та помпа для грязної води">
+</div>
     </section>
   </main>
 
