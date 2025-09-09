@@ -1,20 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- Головна -->
   <url>
     <loc>https://vidkachka-vody.com.ua/</loc>
-    <lastmod>2025-09-05</lastmod>
+    <lastmod>2025-09-05T10:15:00+03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <image:image><image:loc>https://vidkachka-vody.com.ua/images/image1.jpg</image:loc></image:image>
-    <image:image><image:loc>https://vidkachka-vody.com.ua/images/image2.jpg</image:loc></image:image>
+
+    <!-- Картинки головної -->
+    <image:image>
+      <image:loc>https://vidkachka-vody.com.ua/images/image1.jpg</image:loc>
+      <image:title>Встановлення мотопомпи</image:title>
+      <image:caption>Монтаж мотопомпи перед відкачкою</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://vidkachka-vody.com.ua/images/image2.jpg</image:loc>
+      <image:title>Відкачка після підтоплення</image:title>
+      <image:caption>Роботи з ліквідації підтоплення</image:caption>
+    </image:image>
+    <!-- можеш додати інші фото (image3.jpg … image9.jpg) аналогічно -->
   </url>
+
+  <!-- FAQ -->
   <url>
     <loc>https://vidkachka-vody.com.ua/faq.html</loc>
-    <lastmod>2025-09-05</lastmod>
+    <lastmod>2025-09-05T10:15:00+03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
+
+  <!-- Ціни -->
   <url>
     <loc>https://vidkachka-vody.com.ua/prices.html</loc>
-    <lastmod>2025-09-05</lastmod>
+    <lastmod>2025-09-05T10:15:00+03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
