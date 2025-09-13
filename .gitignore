@@ -1,0 +1,10 @@
+# JetBrains IDE
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs/temporary
+*.log
