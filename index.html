@@ -100,16 +100,16 @@
     .steps .step + .step{margin-top:10px}
     .steps .num{counter-increment:step;background:var(--brand);color:#fff;border-radius:999px;width:28px;height:28px;display:grid;place-items:center;font-weight:800}
 
-   .gallery {
+.gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 колонки */
-  gap: 14px; /* відступи між фото */
+  gap: 14px;
 }
 
 .gallery img {
   width: 100%;
-  height: auto;      /* авто-висота = природні пропорції */
-  object-fit: contain; /* не дає спотворювати */
+  height: 220px;      /* однакова висота для всіх */
+  object-fit: cover;  /* обрізає, але не спотворює */
   border-radius: 12px;
   border: 1px solid #eef2ff;
   box-shadow: 0 6px 16px rgba(0,0,0,.06);
